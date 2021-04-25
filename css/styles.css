@@ -1,0 +1,102 @@
+html {
+    font-size: 1vw;
+}
+
+body {
+    background-color: #20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+}
+
+.container {
+    height: 100%;
+}
+
+.logoscript {
+    color: #fff;
+    font-size: 8rem;
+}
+
+.logoscript>strong {
+    color: #fff;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.cyan-filter {
+    filter: invert(74%) sepia(48%) saturate(7499%) hue-rotate(154deg) brightness(102%) contrast(97%);
+}
+
+.is-vcentered {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.wavecontainer {
+    position: fixed;
+    top: 0%;
+    transform: rotate(80deg);
+    left: 60%;
+    height: 60vh;
+    width: 60%
+}
+
+.wave {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: .4;
+    position: absolute;
+    top: 3%;
+    left: 10%;
+    width: 70%;
+    height: 100%;
+    margin-left: -100px;
+    margin-top: -200px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 7000ms infinite linear
+}
+
+.wavecontainer:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0)
+}
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg)
+    }
+    from {
+        transform: rotate(360deg)
+    }
+}
+
+.wave:nth-child(1) {
+    animation: drift 5759ms infinite linear;
+    background-color: #8fff8f;
+    transform-origin: 50% 50%;
+    border-radius: 48%
+}
+
+.wave:nth-child(2) {
+    animation: drift 6915ms infinite linear;
+    background-color: #1aff1a;
+    transform-origin: 50% 40%;
+    border-radius: 53%
+}
+
+.wave:nth-child(3) {
+    animation: drift 5904ms infinite linear;
+    background-color: #24ff24;
+    transform-origin: 50% 53%;
+    border-radius: 55%
+}
